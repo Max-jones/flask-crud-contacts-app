@@ -18,13 +18,13 @@
       <div class="card card-body">
         <form action="{{url_for('add_contact')}}" method="POST">
           <div class="form-group">
-            <input type="text" class="form-control" name="fullname" placeholder="FullName">
+            <input type="text" class="form-control" name="fullname" placeholder="Ingrese el nombre del medicamento">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="email" placeholder="Email">
+            <input type="text" class="form-control" name="phone" placeholder="Precio">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="phone" placeholder="Phone">
+            <input type="text" class="form-control" name="email" placeholder="Procedencia">
           </div>
           <button class="btn btn-primary btn-block">
             Save 
@@ -38,8 +38,8 @@
           <tr>
             <td>ID</td>
             <td>fullname</td>
-            <td>email</td>
             <td>phone</td>
+            <td>email</td>
             <td>Operations</td>
           </tr>
         </thead>
