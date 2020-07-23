@@ -5,10 +5,10 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 
 # Mysql Connection
-app.config['MYSQL_HOST'] = 'localhost' 
+app.config['MYSQL_HOST'] = '127.0.0.1' 
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'password'
-app.config['MYSQL_DB'] = 'flaskcrud'
+#app.config['MYSQL_PASSWORD'] = 'password'
+app.config['MYSQL_DB'] = 'solomedicamentos'
 mysql = MySQL(app)
 
 # settings
@@ -34,6 +34,7 @@ def add_contact():
         mysql.connection.commit()
         flash('Contact Added successfully')
         return redirect(url_for('Index'))
+
 
 @app.route('/edit/<id>', methods = ['POST', 'GET'])
 def get_contact(id):
